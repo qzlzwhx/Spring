@@ -128,10 +128,10 @@ DI的功能是解耦，那么AOP(aspect-oriented programming)允许你把遍布�
 
 
 下边我们看看这种系统的复杂度的例子：
-![image](https://note.youdao.com/yws/res/24545/WEBRESOURCE7fe008f31264e0c92eef9b4e19078148)
+![image](1.png)
 
 如果引入AOP可以让这些服务模块化，我们可以理解切面为一个很多组件之外的外壳，应用就是各个业务功能的模块，借助AOP可以使用各种功能去包裹你的应用层，你的核心应用根本不知道他们的存在。如果引入AOP大概系统的复杂度就是如下图这个样子：
-![image](https://note.youdao.com/yws/res/24543/WEBRESOURCE16ae1845e49a2125b216d8e930512752)
+![image](2.png)
 
 只介绍概念肯定理解不了是啥意思哈，现在还用上边的例子来介绍这个概念。假如我们引入和吟游诗人传唱骑士的事迹。我们需要先创建一个吟游诗人的类,然后在骑士探险开始前和结束后都传唱一下：
 ```
@@ -221,9 +221,9 @@ public class ApocalypseKnight implements Knight {
 ```
 好，到这Spring2个最核心的东西就介绍完了，但是这里上边讲的内容只是DI和AOP的皮毛。接下来介绍一下Spring的容器。<br>
 一个Spring应用的应用对象(bean)都生存与Spring的容器中，Spring负责他们的生命周期。容器是Spring的核心，Spring容器使用DI管理应用的组件，它会自动装配组件。Spring容器有很多种实现，可以分为2类，一类是BeanFactory,一种是应用上下文；后者更加受欢迎。Bean的声明周期，这个比较啰嗦就不介绍了，这个很重要，可以大概看一下这个图：
-![image](https://note.youdao.com/yws/res/24685/WEBRESOURCEe98d291213be5a12b42196c6b26b8838)
+![image](3.png)
 接下来我们看一下Spring的框架，Spring本身提供的东西远远不止DI和AOP，除了Spring自己的简化JAVA开发这个宗旨之外，还有一个庞大生态圈，设计到不同的领域，比如大数据，手机开发,nosql等，Spring都有涉猎，或者正在去做一些努力：
-![image](https://note.youdao.com/yws/res/24691/WEBRESOURCEd4c9d2b577f8a4009192a9fb9fe88e93)
+![image](4.png)
 
 我们上边介绍了Spring的核心和Spring的整个架构，下边继续介绍一下Bean的装配,Spring提供三种装配方式:<br>
 ```
